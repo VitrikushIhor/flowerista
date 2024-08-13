@@ -1,0 +1,76 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font: var(--body-1-400);
+    letter-spacing: 0.32px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.clock {
+    font-size: 24px;
+}
+
+.black {
+    background-color: var(--brown);
+    color: var(--creamy);
+    &:hover{
+        background-color: var(--dark-rose);
+    }
+    &:active{
+        background-color: var(--brown);
+    }
+    &:disabled{
+        background-color: var(--lavander);
+    }
+    .clock {
+        color: var(--creamy);
+    }
+}
+
+.black.loading:disabled{
+    background-color: var(--brown);
+}
+
+.white {
+    background-color: inherit;
+    color: var(--brown);
+    border: var(--brown) solid 2px;
+    &:hover {
+        border-color: var(--dark-rose);
+    }
+    &:active {
+        border-color: var(--brown);
+    }
+    &:disabled{
+        color: var(--lavander);
+        border-color: var(--lavander);
+    }
+    .clock {
+        color: var(--brown);
+    }
+}
+
+.white.loading:disabled {
+    border-color: var(--brown);
+}
+
+.small {
+    width: 221px;
+}
+
+.big {
+    width: 304px;
+}
+
+.full {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .btn {
+        height: 60px;
+    }
+}

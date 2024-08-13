@@ -1,0 +1,154 @@
+
+.searchBox {
+	position: relative;
+}
+
+.searchIcon {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.searchInput {
+	width: 0;
+	height: 36px;
+	border: none;
+	overflow: hidden;
+	background: transparent;
+	&::placeholder{
+		color: var(--gray-dark);
+	}
+	transition: all 0.5s ease-in-out;
+
+}
+
+.searchBox.expanded {
+	input {
+		width: 229px;
+		padding: 6px 0 6px 20px;
+		border-bottom: 1px solid var(--brown);
+		transition: all 0.5s ease-in-out;
+	}
+	}
+
+.searchBox.expanded.menu{
+	input {
+		width: 100%;
+		padding: 6px 0 6px 0;
+	}
+	margin-bottom: 40px;
+}
+.searchResult{
+	position: absolute;
+	width: 436px;
+	z-index: 999;
+	background-color: var(--creamy);
+	height: 600px;
+	overflow-y: scroll;
+	padding-left: 20px !important;
+	padding-right: 42px;
+	border-right: 16px solid var(--creamy);
+	border-top: 10px solid var(--creamy);
+	border-bottom: 21px solid var(--creamy);
+
+	li{
+		a{
+			display: flex;
+			img{
+				width: 50px;
+				height: 60px;
+			}
+		}
+	}
+
+	&__content{
+
+		margin-left: 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		span{
+			font: var(--body-1-400);
+			color: var(--brown);
+		}
+		div{
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&::-webkit-scrollbar {
+		width: 2px;
+		max-height: 380px;
+		background-color: var(--white);
+		right: -20px;
+	}
+	
+	&::-webkit-scrollbar-button {
+		display: none;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		background: var(--rose);
+		min-height: 190px;
+	}
+
+}
+
+.searchResult.menu{
+	width: calc(100% - 20px);
+	padding-left: 0 !important;
+	padding-right: 0;
+	border-right: 20px solid var(--creamy);
+	border-top: 0;
+	border-bottom: 21px solid var(--creamy);
+	margin-top: -30px;
+	li{
+		a{
+			display: flex;
+			img{
+				width: 50px;
+				height: 60px;
+			}
+		}
+	}
+
+	&__content{
+
+		margin-left: 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+.priceDiscount{
+	font: var(--body-1-400);
+	text-decoration: line-through;
+	color: var(--gray-dark);
+	margin-right: 10px;
+}
+
+.defaultPrice{
+	font: var(--body-1-500);
+	color: var(--brown);
+}
+
+.full{
+	height: 1px;
+	width: 100%;
+	background-color: var(--white);
+	margin: 10px 0;
+}
+
+
+// .searchResult::-webkit-scrollbar {
+// 	width: 2px;
+// }
+
+// .searchResult::-webkit-scrollbar-thumb {
+// 	background: #E7A9A7;
+// 	border-radius: 10px;
+// }
