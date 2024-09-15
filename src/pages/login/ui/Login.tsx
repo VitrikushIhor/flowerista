@@ -67,7 +67,9 @@ const Login: FC = () => {
         message: 'Login failed. Wrong password or email not confirmed'
       });
     } else if (data) {
-      setProfile(data.user);
+      // setProfile(data.user);
+      // @ts-ignore
+			setProfile(data);
       Cookies.set('token', data.access_token);
       reset();
       navigate(getRouteProfile());
