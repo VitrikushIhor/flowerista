@@ -1,48 +1,86 @@
-# Getting Started with Create React App
+# Flowerista
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/VitrikushIhor/flowerista/blob/main/LICENSE)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+**Flowerista** is an e-commerce web application dedicated to the online sale of flowers. It offers a user-friendly platform where customers can browse, select, and purchase flowers and related products. The application is designed to provide a seamless shopping experience with a strong focus on performance, accessibility, and scalability.
 
-### `npm start`
+Key features of Flowerista include:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Intuitive User Interface**: The application is built using React, ensuring a responsive and dynamic user experience. The interface is designed with simplicity in mind, making it easy for users to navigate through various product categories, view detailed product information, and manage their shopping cart.
+  
+- **Secure Payment Processing**: Integration with PayPal allows users to make secure payments directly within the platform. This ensures that transactions are handled efficiently and securely, providing peace of mind to customers.
+  
+- **Multilingual Support**: Using i18next, Flowerista offers localization support, allowing the application to be used in multiple languages. This feature makes the platform accessible to a broader audience, catering to users from different linguistic backgrounds.
+  
+- **High Performance**: The application leverages modern tools like Vite for fast builds and Redux Toolkit for efficient state management. These tools help ensure that the application remains fast and responsive even as it scales.
+  
+- **Component-Driven Development**: With Storybook, the development of UI components is isolated and well-documented, ensuring consistency across the application. Visual regression testing with Loki further ensures that UI changes do not introduce unexpected issues.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Automated Testing and CI**: The project includes a comprehensive testing setup using Jest and React Testing Library, ensuring high code quality. Husky is used to manage Git hooks, automating tasks like linting and testing before commits, thus maintaining code integrity.
 
-### `npm test`
+- **Scalable Architecture**: The application is designed following the Feature-Sliced Design (FSD) methodology, which promotes a modular and scalable architecture. This ensures that the project can grow and evolve over time without becoming unmanageable.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project leverages the following technologies and tools:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React** — A library for building user interfaces.
+- **TypeScript** — A programming language that extends JavaScript with static typing.
+- **Vite** — A modern build tool that offers fast setup and development.
+- **Redux Toolkit** — A library for managing application state using Redux.
+- **RTK Query** — A powerful data-fetching tool that is part of Redux Toolkit.
+- **Jest** — A testing framework for JavaScript, ideal for unit tests.
+- **React Testing Library** — A library for testing React components.
+- **Storybook** — An isolated development environment for building UI components.
+- **Loki** — A tool for visual regression testing.
+- **i18next** — A library for internationalization and localization.
+- **Husky** — A tool for managing Git hooks.
+- **Swiper** — A modern slider component for web applications.
+- **Feature-Sliced Design (FSD)** — A methodology for frontend architecture in scalable projects.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation and Setup
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   git clone https://github.com/VitrikushIhor/flowerista.git
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Install dependencies:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+Run the application:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run tests:
 
-## TEST
+```bash
+npm run test
+```
+
+To start Storybook:
+
+```bash
+npm run storybook
+```
+
+Third-Party Services
+PayPal — Integrated for handling online payments.
+Localization
+The project supports multiple languages using i18next. You can add or modify language files in the corresponding directory.
+
+Contributing
+Please feel free to create a Pull Request or open an Issue if you have any suggestions or find any bugs.
+
+License
+This project is licensed under the MIT License.
+```
