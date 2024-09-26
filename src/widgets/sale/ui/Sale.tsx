@@ -6,11 +6,12 @@ import { SectionTitle } from '../../../shared/ui/SectionTitle';
 
 import styles from './styles.module.scss';
 import { useGetTopSellers } from '../model/api/getTopSellers/getTopSellers.ts';
+import {userShared} from '../../../entities/shared/model/selectors/getShared.ts';
 
 export const Sale: FC = () => {
   const { t } = useTranslation();
-
-  const { data, error, isLoading } = useGetTopSellers();
+  const currentLanguage = userShared().lang;
+  const { data, error, isLoading } = useGetTopSellers(currentLanguage);
 
   if (isLoading) {
     return (

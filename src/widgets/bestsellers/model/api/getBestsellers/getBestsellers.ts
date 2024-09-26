@@ -3,9 +3,9 @@ import { InterfaceFlowerCard } from '../../../../../features/card/model/types/In
 
 const getBestsellersApi = rtkApi.injectEndpoints({
   endpoints: (build) => ({
-    getBestsellers: build.query<InterfaceFlowerCard[], void>({
-      query: () => ({
-        url: `/bouquete/bs`
+    getBestsellers: build.query<InterfaceFlowerCard[], string>({
+      query: (lang) => ({
+        url: `/bouquete/bs?lang=${lang}`
       })
     })
   })

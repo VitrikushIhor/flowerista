@@ -13,7 +13,7 @@ import { useCheckoutActions } from '../model/slice/checkout.slice.ts';
 import { Cart } from '../../../widgets/cart';
 import { CheckoutModal } from '../../../widgets/checkoutModal';
 import { useUser } from '../../profile/model/selectors/getUser.ts';
-import { useCart } from '../../../entities/cart/model/selectors/getCart/getCart.ts';
+import { useCart } from '../../../entities/cart';
 
 const CheckoutPage: FC = () => {
   const { t } = useTranslation();
